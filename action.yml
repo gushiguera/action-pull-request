@@ -22,9 +22,13 @@ inputs:
   destination_base_branch:
     description: 'The branch into which you want your code merged.'
     required: false
-    default: "main"
+    default: 'main'
   pull_request_reviewers:
     description: 'Pull request reviewers users'
+    required: false
+  pr_desc:
+    description: 'PR description'
+    default: 'PR description'
     required: false
 runs:
   using: 'docker'
@@ -35,6 +39,7 @@ runs:
     - ${{ inputs.destination-folder }}
     - ${{ inputs.user-email }}
     - ${{ inputs.user-name }}
+    - ${{ inputs.pr_desc }}
     - ${{ inputs.destination-head-branch }}
     - ${{ inputs.destination-base-branch }}
     - ${{ inputs.pull-request-reviewers }}
