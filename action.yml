@@ -26,6 +26,9 @@ inputs:
   pull_request_reviewers:
     description: 'Pull request reviewers users'
     required: false
+  destination-pr-description:
+    description: 'Pull request title + description'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -35,6 +38,7 @@ runs:
     - ${{ inputs.destination-folder }}
     - ${{ inputs.user-email }}
     - ${{ inputs.user-name }}
+    - ${{ inputs.destination-pr-description }}
     - ${{ inputs.destination-head-branch }}
     - ${{ inputs.destination-base-branch }}
     - ${{ inputs.pull-request-reviewers }}
