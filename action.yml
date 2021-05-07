@@ -22,7 +22,7 @@ inputs:
   destination_base_branch:
     description: 'The branch into which you want your code merged.'
     required: false
-    default: 'main'
+    default: "main"
   pull_request_reviewers:
     description: 'Pull request reviewers users'
     required: false
